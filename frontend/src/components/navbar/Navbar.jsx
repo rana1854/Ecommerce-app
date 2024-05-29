@@ -2,7 +2,7 @@ import React from 'react'
 
 const Navbar = () => {
     return (
-        <div>Changes made by siddique in Navbar</div>
+        <div>2nd Change made by siddique in Navbar</div>
     )
 }
 

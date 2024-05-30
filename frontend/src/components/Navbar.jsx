@@ -3,11 +3,8 @@ import { FaSearch } from "react-icons/fa";
 
 const Navbar = () => {
     return (
-<<<<<<< HEAD:frontend/src/components/Navbar.jsx
-        <div>Navbar is here</div>
-    )
-}
-=======
+
+
         <header>
             <nav className='bg-white'>
             <div className='flex item-center font-medium justify-around'>
@@ -26,7 +23,14 @@ const Navbar = () => {
                 <div className='md:block hidden'>
                     <Buttons/>
                 </div>
->>>>>>> 61862cc (unknown):frontend/src/components/navbar/Navbar.jsx
+                <ul className={'md-hidden bg-white absolute w-full h-full bottom-0 py-24 pl-4'}>
+                <li>
+                        <link to= "/" class="py-7 px-3 inline-block">
+                            Home
+                        </link>
+                        </li>
+                        <Navlinks/>
+                </ul>
 
                 </div>
 

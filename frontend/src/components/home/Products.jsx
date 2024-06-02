@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaFilter } from "react-icons/fa";
-import Card from "../../components/Card";
+import Card from "../Card";
 
 const Products = () => {
   const [jsonData, setJsonData] = useState([]);
@@ -77,54 +77,54 @@ const Products = () => {
       <div>
 
         <div className="flex flex-col md:flex-row flex-wrap md:justify-between items-center space-y-3 mb-8">
-        <div className="flex flex-row justify-start md:items-center md:gap-8 gap-4  flex-wrap">
-          <button
-            onClick={showAll}
-            className={selectedCategory === "all" ? "active" : ""}
-          >
-            All Products
-          </button>
-          <button
-            onClick={() => filterItems("Dress")}
-            className={selectedCategory === "Dress" ? "active" : ""}
-          >
-            Clothing
-          </button>
-          <button
-            onClick={() => filterItems("Hoodies")}
-            className={selectedCategory === "Hoodies" ? "active" : ""}
-          >
-            Hoodies
-          </button>
-          <button
-            onClick={() => filterItems("Bag")}
-            className={selectedCategory === "Bag" ? "active" : ""}
-          >
-            Bag
-          </button>
-        </div>
+          <div className="flex flex-row justify-start md:items-center md:gap-8 gap-4  flex-wrap">
+            <button
+              onClick={showAll}
+              className={selectedCategory === "all" ? "active" : ""}
+            >
+              All Products
+            </button>
+            <button
+              onClick={() => filterItems("Dress")}
+              className={selectedCategory === "Dress" ? "active" : ""}
+            >
+              Clothing
+            </button>
+            <button
+              onClick={() => filterItems("Hoodies")}
+              className={selectedCategory === "Hoodies" ? "active" : ""}
+            >
+              Hoodies
+            </button>
+            <button
+              onClick={() => filterItems("Bag")}
+              className={selectedCategory === "Bag" ? "active" : ""}
+            >
+              Bag
+            </button>
+          </div>
 
-        <div className="flex justify-end mb-4 rounded-sm">
-        <div className="bg-black p-2 ">
-        <FaFilter className="text-white h-4 w-4"/>
-        </div>
-          <select
-            id="sort"
-            onChange={(e) => handleSortChange(e.target.value)}
-            value={sortOption}
-            className="bg-black text-white px-2 py-1 rounded-sm" 
-          >
-            <option value="default"> Default</option>
-            <option value="A-Z">A-Z</option>
-            <option value="Z-A">Z-A</option>
-            <option value="low-to-high">Low to High</option>
-            <option value="high-to-low">High to Low</option>
-          </select>
-        </div>
+          <div className="flex justify-end mb-4 rounded-sm">
+            <div className="bg-black p-2 ">
+              <FaFilter className="text-white h-4 w-4" />
+            </div>
+            <select
+              id="sort"
+              onChange={(e) => handleSortChange(e.target.value)}
+              value={sortOption}
+              className="bg-black text-white px-2 py-1 rounded-sm"
+            >
+              <option value="default"> Default</option>
+              <option value="A-Z">A-Z</option>
+              <option value="Z-A">Z-A</option>
+              <option value="low-to-high">Low to High</option>
+              <option value="high-to-low">High to Low</option>
+            </select>
+          </div>
         </div>
 
         {/* product card */}
-        <Card filteredItems={filteredItems}/>
+        <Card filteredItems={filteredItems} />
       </div>
     </div>
   );

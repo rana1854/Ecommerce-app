@@ -1,25 +1,21 @@
 import React from 'react'
-import Banner from '../components/home/Banner'
-import Products from '../components/home/Products'
-import BestSellers from '../components/home/BestSellers'
-import Newsletter from '../components/home/Newsletter'
-import Category from '../components/home/Category'
-import Collection from "../components/home/Collection"
-import Singleproduct from "../components/home/Singleproduct"
-
+import Banner from '../components/Home/Banner'
+import Category from '../components/Home/Category'
+import Products from '../components/Home/Products'
+import Collections from '../components/Home/Collections'
+import BestSellers from '../components/Home/BestSellers'
+import Newsletter from '../components/Home/Newsletter'
 
 
 const Home = () => {
   return (
     <div>
       <Banner />
+      <Category />
       <Products />
+      <Collections />
       <BestSellers />
       <Newsletter />
-      <Category />
-      <Collection />
-      <Singleproduct />
-
     </div>
   )
 }

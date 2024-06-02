@@ -4,10 +4,10 @@ import { FaFacebookF } from "react-icons/fa6";
 import { FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
-    const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear();
   return (
     <footer>
-        {/* footer top */}
+      {/* footer top */}
       <div className="max-w-screen-2xl container mx-auto xl:px-28 px-4">
         <div className="mt-20 mb-10 flex flex-col md:flex-row items-start justify-between gap-8">
           {/* company info */}
@@ -97,7 +97,7 @@ const Footer = () => {
 
       {/* footer bottom */}
       <div className="bg-Black">
-      <p className="text-white text-center items-center py-3">© {currentYear} Coral, Inc.</p>
+        <p className="text-white text-center items-center py-3">© {currentYear} Coral, Inc.</p>
       </div>
     </footer>
   );

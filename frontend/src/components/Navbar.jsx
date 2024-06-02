@@ -1,15 +1,15 @@
-port React, { useState } from "react";
+import React, { useState } from "react";
 import { FaBars, FaSearch, FaShoppingBag, FaTimes, FaUser } from "react-icons/fa";
 import logo from "/logo.svg";
 import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen)
-    }
-    
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
   const navItems = [
     { title: "Jewelry & Accessories", path: "/" },
     { title: "Clothing & Shoes", path: "/" },
@@ -38,22 +38,22 @@ const Navbar = () => {
         </div>
 
         <div className="sm:hidden">
-            <button onClick={toggleMenu}>
-                {
-                    isMenuOpen ? <FaTimes className="w-6 h-6 text-black"/> : <FaBars className="w-6 h-6 text-black"/>
-                }
-            </button>
+          <button onClick={toggleMenu}>
+            {
+              isMenuOpen ? <FaTimes className="w-6 h-6 text-black" /> : <FaBars className="w-6 h-6 text-black" />
+            }
+          </button>
         </div>
       </nav>
       <hr />
       {/* nav items */}
       <div className="pt-4">
         <ul className="lg:flex items-center justify-between text-black hidden">
-          {navItems.map(({ title, path}) => (
+          {navItems.map(({ title, path }) => (
             <li key={title} className=" hover:text-orange-500">
               <NavLink
                 to={path}
-                className={({ isActive}) => isActive ? "active" : ""}
+                className={({ isActive }) => isActive ? "active" : ""}
               >
                 {title}
               </NavLink>
@@ -76,8 +76,8 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        </div>
-      
+      </div>
+
     </header>
   );
 };

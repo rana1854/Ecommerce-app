@@ -6,8 +6,8 @@ const Banner = () => {
   return (
     <div className="bg-primaryBG py-12 xl:px-28 px-4">
       <div className="py-28 flex flex-col md:flex-row-reverse justify-between items-center gap-14">
-      <div className="md:w-1/2">
-            <img src={bannerImg} alt="" className="mx-auto h-full md:h-[562px] md:w-[442px] w-full" />
+        <div className="md:w-1/2">
+          <img src={bannerImg} alt="" className="mx-auto h-full md:h-[562px] md:w-[442px] w-full" />
         </div>
 
         <div className="md:w-1/2 w-full">
@@ -20,7 +20,7 @@ const Banner = () => {
             <FaShoppingBag className="inline-flex" /> Shop Now
           </button>
         </div>
-        
+
       </div>
     </div>
   );
